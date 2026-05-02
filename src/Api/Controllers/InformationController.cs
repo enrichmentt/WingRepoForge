@@ -20,7 +20,7 @@ namespace WingRepoForge.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet("information")]
+        [HttpGet("/information")]
         public ActionResult<ServerInformationResponse> GetInformation()
         {
             var response = new ServerInformationResponse(
@@ -32,7 +32,7 @@ namespace WingRepoForge.Api.Controllers
             return Ok(response);
         }
 
-        [HttpGet("manifestSearch")]
+        [HttpGet("/manifestSearch")]
         public ActionResult<ManifestSearchCapabilityResponse> GetSearchCapabilities()
         {
             var response = new ManifestSearchCapabilityResponse(
